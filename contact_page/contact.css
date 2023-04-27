@@ -1,0 +1,392 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-decoration: none;
+    user-select: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.page_wrapper {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://source.unsplash.com/2000x1000/?dentures);
+    background-position: top;
+    background-size: cover;
+
+}
+
+/* ----CSS NAVBAR START--- */
+.page_wrapper nav {
+    width: 90%;
+    margin: auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.page_wrapper nav .logo {
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #10564F;
+    font-weight: bold;
+}
+
+.page_wrapper nav ul li {
+    display: inline-block;
+    margin-left: 35px;
+    position: relative;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.page_wrapper nav ul li a {
+    color:#fff;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.page_wrapper nav ul li::after {
+    content: ' ';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: #fff;
+    width: 0%;
+    height: 2px;
+    transition: 0.3s;
+}
+
+.page_wrapper nav ul li:hover::after,
+.page_wrapper nav ul li:active::after{
+    width: 100%;
+}
+
+nav img {
+    width: 160px;
+    padding: 15px;
+}
+
+nav {
+    /* background: #7da09d4a; */
+    padding: 25px;
+    top: 5px;
+}
+
+.login_btn {
+    padding: 15px 25px;
+    background-color: #10564F;
+    color: #fff;
+    border-radius: 30px;
+    text-transform: capitalize;
+    border: 1px solid #10564F;
+    transition: 0.4s;
+}
+
+.login_btn:hover{
+    background-color: transparent;
+    color: #10564F;
+}
+/* ---CSS NAVBAR END---- */
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 6%;
+    transform: translateY(-50%);
+    width: 60%;
+}
+
+.content h1{
+    color:#fff;
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content h2{
+    color:#fff;
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content p {
+    color:#eaeaea;
+    line-height: 1.7;
+    letter-spacing: 1.5px;
+    margin-bottom: 40px;
+    text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.5);
+
+}
+
+.content .btn {
+    padding: 15px 25px;
+    background-color: #10564F;
+    color: #fff;
+    border-radius: 30px;
+    text-transform: capitalize;
+    border: 1px solid #10564F;
+    transition: 0.4s;
+}
+
+.content .btn:hover{
+    background-color: transparent;
+    color: #10564F;
+}
+
+.social_links{
+    position: absolute;
+    bottom: 50px;
+    left: 6%;
+}
+
+.social_links a i{
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    margin-right: 10px;
+    transition: 0.4s;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.social_links a i:hover{
+    background-color: #10564F;
+}
+
+/* ---Start of About Styling--- */
+/* ---End of About Styling--- */
+
+/* ---Start of Services&Pricing Styling--- */
+/* ---End of Services&Pricing Styling--- */
+
+/* ---Start of Contact Styling--- */
+.contactUs {
+    position: relative;
+    width: 100%;
+    height: 70%;
+    padding: 40px;
+}
+
+.contactUs .contact-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+
+}
+
+.contactUs .contact-title h2 {
+    color: #fff;
+    font-weight: 500;
+}
+
+.form {
+    grid-area: form;
+}
+
+.info {
+    grid-area: info;
+}
+
+.map {
+    grid-area: map;
+}
+
+.contact {
+    padding: 40px;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-box {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 4fr;
+    grid-template-areas: 
+    "form info"
+    "form map"
+    ;
+    grid-gap: 10px;
+    margin-top: 5px;
+}
+
+    /* form */
+.form {
+    position: relative;
+    width: 100%;
+}
+
+.formBox .row50 {
+    display: flex;
+    gap: 10px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+.formBox .row100 .inputBox {
+    width: 100%;
+}
+
+.inputBox span {
+    color: #10564F;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.inputBox input {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+}
+
+.inputBox textarea {
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize:none;
+    min-height: 165px;
+    margin-bottom: 10px;
+}
+
+.inputBox input[type="submit"] {
+    background: #ff578b;
+    color: #fff;
+    border: none;
+    font-size: 1.1em;
+    max-width: 120px;
+    font-weight: 500;
+}
+
+.inputBox ::placeholder {
+    color:  #999;
+}
+    /* Info */
+.info {
+    background: #10564F;
+}
+
+.info h3 {
+    color: #fff;
+}
+
+.info .infoBox div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div span {
+    min-width: 40px;
+    height: 40px;
+    color: #fff;
+    background: #158378;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.info .infoBox div i {
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    margin: 8px;
+}
+
+.info .infoBox div p {
+    color: #fff;
+    font-size: 1.1em;
+}
+
+.info .infoBox div a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.socmed {
+    margin-top: 40px;
+    display: flex;
+}
+
+.socmed li {
+    list-style: none;
+    margin-right: 15px;
+}
+
+.socmed li a {
+    color: #fff;
+    font-size: 2em;
+    color: #ccc;
+}
+.socmed li a:hover {
+    color: #fff;
+}
+
+.map {
+    padding: 0;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* responsiveness */
+@media screen and (max-width: 991px){
+.contactUs{
+    padding: 20px;
+}
+
+.contact-box {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "form"
+    "info"
+    "map"
+    ;
+}
+
+.map {
+    min-height: 300px;
+}
+
+.formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+}
+
+.inputBox {
+
+    width: 100%;
+}
+
+}
+
+/* ---End of Contact Styling--- */

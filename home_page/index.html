@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =============Google Fonts======================= -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- =============Google Fonts======================= -->
+
+    <!-- ==========Icons CDN================ -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- ==========Icons CDN================ -->
+
+    <link rel="stylesheet" href="/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <title>CABS Creative Studio</title>
+
+    
+
+</head>
+<body class="home">
+
+<!-- ========================Header Section=============================================== -->
+
+    <header class="primary-header container flex">
+        <div class="header-inner-one flex">
+            <div class="logo">
+                <img src="/img/final Logo (2).png" alt="logo.png">
+            </div>
+
+            <button class="mobile-close-btn" data-visible="false" aria-controls="primary-navigation">
+                <i class="uil uil-times-circle"></i>
+            </button>
+
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li><a class="active fs-100 fs-montserrat bold-500"  href="/index.html">Home</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/shop page/shop.html">Services</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/about page/about.html">About</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/blog/blog.html">Blog</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/contact page/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="header-login flex">
+            <div class="username-email" id="user-email">user@email.com</div>   
+            <button type="button" id="login-modal-open" class="login-btn" id="login-modal-open">
+                <p class="fs-100 fs-montserrat bold-500">Login</p>
+            </button>           
+            <i class="uil uil-search"></i>
+            <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag"></i>
+            <!-- ================================================ -->
+
+            <!-- login Modal  -->
+            <div class="wrapper login-modal modal-top" id="login-modal">
+
+                <div class="title-text">
+                  <div class="title login">Welcome Back!</div>
+                  <span class="close-login-modal-btn x-btn">&times;</span>
+                  <div class="title signup">Join Us Now!</div>
+                </div>
+          
+                <div class="form-container">
+                  <div class="slide-controls">
+                    <input type="radio" name="slider" id="login" checked />
+                    <input type="radio" name="slider" id="signup" />
+                    <label for="login" class="slide login">Login</label>
+                    <label for="signup" class="slide signup">Signup</label>
+                    <div class="slide-tab"></div>
+                  </div>
+          
+                  <div class="form-inner">
+          
+                    <form action="#" class="login" id="login-form">
+                      <div class="login-error-message"></div>
+                      <div class="field">
+                        <input type="text" placeholder="Email Address" required />
+                      </div>
+                      <div class="field">
+                        <input type="password" placeholder="Password" required />
+                      </div>
+                      <div class="pass-link">
+                        <a href="#">Forgot Password?</a>
+                      </div>
+                      <div class="field">
+                        <input type="submit" value="login" />
+                      </div>
+                      <div class="signup-link">
+                          Not a member? <a href="#">Signup now</a>
+                      </div>
+                    </form>
+                    
+          
+                    <form action="#" class="signup">
+                      <div class="signup-error-message"></div>
+                      <div class="signup-confirmation-modal"></div>
+                      <div class="field">
+                        <input type="text" placeholder="Email Address" required />
+                      </div>
+                      <div class="field">
+                        <input type="password" placeholder="Password" required />
+                      </div>
+                      <div class="field">
+                        <input type="password" placeholder="Confirm Password" required />
+                      </div>
+                      <div class="field">
+                        <input type="submit" value="signup" />
+                      </div>
+                    </form>
+                    
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Forgot Password Modal -->
+              <div class="modal">
+                <div class="modal-content">
+                  <span class="close-modal-btn">&times;</span>
+                  <h2>Forgot Password?</h2>
+                  <p>Please enter your email address to reset your password.</p>
+                  <form>
+                    <div class="field">
+                      <input type="email" placeholder="Email Address" required />
+                    </div>
+                    <div class="field">
+                      <input type="submit" id="reset-password-btn" value="Reset Password" />
+                    </div>
+                  </form>
+                  <div class="error-message"></div>
+                  <div class="confirmation-modal"></div>
+                </div>
+              </div>
+          
+            <!-- ================================================ -->
+
+            <!-- ================================================ -->
+
+            <!-- Cart Box  -->
+
+            <div id="cart-icon" data-visible="false" class="cart-icon">
+                <div class="shopping flex">
+                    <p>Shopping Basket</p>
+                    <i id="cross-btn" class="uil uil-times"></i>
+                </div>
+                <div class="cart bold-800 flex">
+                    <i class="uil uil-shopping-cart-alt"></i>
+                    <p>Cart Is Empty</p>
+                </div>
+            </div>
+            <!-- ================================================ -->
+
+        </div>
+
+        <div class="mobile-open-btn">
+            <i class="uil uil-align-right"></i>
+        </div>
+
+    </header>
+
+<!-- ========================End of Header Section=============================================== -->
+
+
+<!-- ========================Hero Section=============================================== -->
+
+<main class="hero-section">
+    <div class="difuser"></div>
+    <div class="slide-container">
+        <div class="slide-wrapper">
+            <img src="https://source.unsplash.com/1000x500/?studio" alt="img1.jpg">
+            <img src="https://source.unsplash.com/1000x500/?videostudio" alt="img1.jpg">
+            <img src="https://source.unsplash.com/1000x500/?photostudio" alt="img1.jpg">
+            <img src="https://source.unsplash.com/1000x500/?production" alt="img1.jpg">       
+        </div>
+    </div>
+    
+    <div class="hero-inner flex">
+        <div>
+            <button class="large-btn bg-red text-white fs-poppins fs-200 ">Check Our Products</button>
+            <button class="large-btn bg-red text-white fs-poppins fs-200" id="hire-us-btn">Hire Us</button>
+            <div class="hero-info">
+                <h4 class="fs-montserrat">Description</h4>
+                <p class="fs-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae asperiores et pariatur nam velit omnis corporis. Iure iste vel impedit recusandae nulla, animi distinctio laudantium deleniti sunt. Ipsam atque quisquam est error accusamus, et, <br><br> rerum necessitatibus cum id dignissimos voluptatibus temporibus perspiciatis neque nulla, voluptatum pariatur magnam doloribus vel a. Est voluptatem sed ipsum ducimus, earum alias ab, voluptate ratione in vel dolorum maiores quos iure consequuntur adipisci deleniti necessitatibus.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- ==================End of Hero Section=============================================== -->
+
+<!-- ==================Product Section=============================================== -->
+
+    
+
+    <section class="product-section">
+
+    <!-- //////////Section 1 =============================================== -->
+
+        <div class="category bg-black grid">
+            <div class="product-category">
+                <h3 class="text-white fs-300 fs-montserrat">Be Amaze<span class="block fs-200 fs-poppins">with our</span> <span class="earphone uppercase fs-400 fs-montserrat bold-900 lineheight">Photo Editing</span></h3>
+                <button class="product-btn large-btn text-white bg-gray fs-montserrat">Browse</button>
+            </div>
+
+            <div class="product-img1">
+                <img src="https://source.unsplash.com/300x200/?printdesign" alt="product-img.jpg">
+            </div>
+        </div>
+
+    <!-- //////////Section 2 =============================================== -->
+        <div class="category bg-red grid">
+            <div class="product-category">
+                <h3 class="text-white fs-300 fs-montserrat">Prepare for<span class="block fs-200 fs-poppins">our magnificient</span> <span class="earphone uppercase fs-400 fs-montserrat bold-900 lineheight">Video Editing</span></h3>
+                <button class="product-btn large-btn text-red bg-white fs-montserrat">Browse</button>
+            </div>
+
+            <div class="product-img2">
+                <img src="https://source.unsplash.com/300x200/?video edit" alt="product-img.jpg">
+            </div>
+        </div>
+    
+    <!-- //////////Section 3 =============================================== -->
+    <div class="category bg-yellow grid">
+        <div class="product-category">
+            <h3 class="text-white fs-300 fs-montserrat">Never missed out<span class="block fs-200 fs-poppins">our creative</span><span class="earphone uppercase fs-400 fs-montserrat bold-900 lineheight">Graphic Designs</span></h3>
+            <button class="product-btn large-btn text-yellow bg-white fs-montserrat">Browse</button>
+        </div>
+
+        <div class="product-img3">
+            <img src="https://source.unsplash.com/300x200/?edit" alt="product-img.jpg">
+        </div>
+    </div>
+    
+    <!-- //////////Section 4 =============================================== -->
+    <div class="category bg-gray grid">
+        <div class="product-category">
+            <h3 class="text-black fs-300 fs-montserrat">feel special<span class="block fs-200 fs-poppins">with our</span> <span class="earphone uppercase fs-400 fs-montserrat bold-900 lineheight">Personalize Packages</span></h3>
+            <button class="product-btn large-btn text-gray bg-white fs-montserrat">Browse</button>
+        </div>
+
+        <div class="product-img4">
+            <img src="https://source.unsplash.com/300x200/?video" alt="product-img.jpg">
+        </div>
+    </div>
+
+    <!-- //////////Section 5 =============================================== -->
+    <div class="category bg-green grid">
+        <div class="product-category">
+            <h3 class="text-white fs-300 fs-montserrat">Let's start your<span class="block fs-200 fs-poppins">future house with our</span> <span class="earphone uppercase fs-400 fs-montserrat bold-900 lineheight">2D&3D CAD</span></h3>
+            <button class="product-btn large-btn text-green bg-white fs-montserrat">Browse</button>
+        </div>
+
+        <div class="product-img5">
+            <img src="https://source.unsplash.com/300x200/?photo" alt="product-img.jpg">
+        </div>
+    </div>
+
+    <!-- //////////Section 6 =============================================== -->
+    <div class="category bg-blue grid">
+        <div class="product-category">
+            <h3 class="text-white fs-300 fs-montserrat">Looking for<span class="block fs-200 fs-poppins">something amazing?</span> <span class="earphone uppercase fs-400 fs-montserrat bold-900 lineheight">try our 3D rendering</span></h3>
+            <button class="product-btn large-btn text-blue bg-white fs-montserrat">Browse</button>
+        </div>
+
+        <div class="product-img6">
+            <img src="https://source.unsplash.com/300x200/?sketch" alt="product-img.jpg">
+        </div>
+    </div>
+</section>
+
+
+<!-- ==================End of Product Section=============================================== -->
+<!-- ================================================================================ -->
+<!-- ==================Service Section=============================================== -->
+
+    <section class="service-section">
+        <div class="service">
+            <img src="/img/truck-fast-solid.svg" alt="shipping.svg">
+            <div class="service-info">
+                <h3 class="fs-poppins fs-200">Free Shipping</h3>
+                <p class="fs-montserrat fs-50">Free Shipping On All Order</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="/img/certified.png" alt="cert.svg">
+            <div class="service-info">
+                <h3 class="fs-poppins fs-200">Money Back Guarantee</h3>
+                <p class="fs-montserrat fs-50">30 Days Money Back</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="/img/customer-service-headset.svg" alt="support.svg">
+            <div class="service-info">
+                <h3 class="fs-poppins fs-200">Online Support 24/7</h3>
+                <p class="fs-montserrat fs-50">Technical Support 24/7</p>
+            </div>
+        </div>
+
+        <div class="service">
+            <img src="/img/payment.png" alt="payment.svg">
+            <div class="service-info">
+                <h3 class="fs-poppins fs-200">Secure Payment</h3>
+                <p class="fs-montserrat fs-50">All Cards Accepted</p>
+            </div>
+        </div>
+    </section>
+
+<!-- ==================End of Service Section======================================== -->
+
+<!-- ==================Feature Section=============================================== -->
+
+    <section class="feature-section bg-red">
+        <div class="feature-one grid">
+            <div class="sale-img">
+                <img src="https://source.unsplash.com/1000x600/?video edit" alt="feature-product.jpg">
+            </div>
+
+            <div class="sale-text">
+                <p class="text-white uppercase">30% OFF</p>
+                <p class="font-size lineheight fs-600 text-white fs-poppins bold-900 uppercase">first <span class="smile">time</span></p>
+                <p class="date text-white fs-poppins fs-50">Apr to May</p>
+            </div>
+        </div>
+
+        <div class="feature-info">
+            <h2 class="text-white fs-poppins fs-100 bold-400">All Services That We Offer</h2>
+            <p class="text-white fs-poppins fs-200 bold-600">Hire Us Now!</p>
+            <p class="text-white fs-montserrat fs-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae itaque, officiis mollitia cum fugit qui! Praesentium placeat adipisci possimus maxime nihil laborum soluta totam vel.</p>
+            <button class="product-btn large-btn text-red bg-white fs-poppins" id="hire-us-btn">View Offer</button>
+        </div>
+
+    </section>
+
+<!-- ==================End of Feature Section======================================== -->
+
+<!-- ==================Best Selling Section========================================== -->
+
+    <!-- ++++++++++++++++++++HEADING+++++++++++++++++++++++++++++ -->
+    <section class="best-product container">
+        <h2 class="letter-spacing bold-bolder fs-300 fs-poppins">Best Seller Service</h2>
+        <p class="fs-montserrat fs-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </section>
+
+    <section class="best-seller">
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?photography" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Photo Booth</p>
+            <p class="fs-poppins bold-800">starts at $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?graphicdesign" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Event Coverage</p>
+            <p class="fs-poppins bold-800">starts at  $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?webdeveloper" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Photo Editing</p>
+            <p class="fs-poppins bold-800">starts at  $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?photo edit" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Graduation Packages</p>
+            <p class="fs-poppins bold-800">starts at $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?3D design" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Video Production</p>
+            <p class="fs-poppins bold-800">starts at $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?3D floor plan" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Personalized Service</p>
+            <p class="fs-poppins bold-800">starts at  $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?advertisement" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">Full stack Web Development</p>
+            <p class="fs-poppins bold-800">starts at  $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        <!-- =================================== -->
+        <div class="product grid">
+            <img src="https://source.unsplash.com/1000x500/?graphic design" alt="best-selling-product.png">
+            <p class="fs-poppins bold-500">2D and 3D CAD</p>
+            <p class="fs-poppins bold-800">starts at  $999.99</p>
+
+            <!-- =================================== -->
+            
+            <div class="product-details grid bg-red">
+                <i class="uil text-white uil-shopping-cart-alt"></i>
+                <i class="uil text-white uil-heart-alt"></i>
+            </div>
+
+            <!-- =================================== -->
+        </div>
+        <!-- =================================== -->
+
+        
+
+    </section>
+
+
+<!-- ==================End of Best Selling Section=================================== -->
+
+<!-- ==================Feature Section 2=============================================== -->
+
+<section class="feature-section2 bg-green">
+    <div class="feature-green feature-one grid">
+        <div class="sale-img2">
+            <img src="https://source.unsplash.com/1000x600/?studio" alt="feature-product.jpg">
+        </div>
+        <div class="sale-text2">
+            <p class="text-white uppercase">100% OFF</p>
+            <p class="font-size lineheight fs-600 text-white fs-poppins bold-900 uppercase">Free <span class="smile">Sample</span></p>
+            <p class="date text-white fs-poppins fs-50">15 Nov To & Dec</p>
+        </div>
+    </div>
+
+    <div class="feature-info2">
+        <h2 class="text-white fs-poppins fs-200 bold-500">Includes All Of Our Online Services</h2>
+        <p class="text-white fs-poppins fs-300 bold-800">Try it Now!</p>
+        <p class="text-white fs-montserrat fs-50">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae itaque, officiis mollitia cum fugit qui! Praesentium placeat adipisci possimus maxime nihil laborum soluta totam vel.</p>
+        <button class="product-btn large-btn text-red bg-white fs-poppins" id="signup-btn">Signup</button>
+    </div>
+
+</section>
+
+<!-- ==================End of Feature Section 2======================================== -->
+
+<!-- ==================Heading Recent NEWS============================================ -->
+
+<section class="best-product container">
+    <h2 class="letter-spacing bold-bolder fs-300 fs-poppins">Recent News</h2>
+    <p class="fs-montserrat fs-100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</section>
+
+<section class="recent-news grid">
+
+<!-- =======================News Article 1======================= -->
+    <div class="news grid">
+        <img src="/img/news2.jpeg" alt="recent-news.jpg">
+        <div class="fs-montserrat fs-100 padding-inline flex">
+            <p>INSERT DATE HERE</p>
+            <p>by (enter news author)</p>
+        </div>
+        <h2 class="fs-poppins fs-100 bold-600 padding-inline">Enter new title here</h2>
+        <p class="fs-montserrat fs-100 padding-inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium unde fuga tenetur quis corrupti laboriosam adipisci earum eius.</p>
+    </div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- =======================News Article 2======================= -->
+    <div class="news grid">
+        <img src="/img/news1.webp" alt="recent-news.jpg">
+        <div class="fs-montserrat fs-100 padding-inline flex">
+            <p>INSERT DATE HERE</p>
+            <p>by (enter news author)</p>
+        </div>
+        <h2 class="fs-poppins fs-100 bold-600 padding-inline">Enter new title here</h2>
+        <p class="fs-montserrat fs-100 padding-inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium unde fuga tenetur quis corrupti laboriosam adipisci earum eius.</p>
+    </div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- =======================News Article 3======================= -->
+    <div class="news grid">
+        <img src="/img/news3.jpeg" alt="recent-news.jpg">
+        <div class="fs-montserrat fs-100 padding-inline flex">
+            <p>INSERT DATE HERE</p>
+            <p>by (enter news author)</p>
+        </div>
+        <h2 class="fs-poppins fs-100 bold-600 padding-inline">Enter new title here</h2>
+        <p class="fs-montserrat fs-100 padding-inline">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium unde fuga tenetur quis corrupti laboriosam adipisci earum eius.</p>
+    </div>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+</section>
+<!-- ==================End Heading Recent NEWS======================================== -->
+
+
+<!-- ======================================================================================================================================================== -->
+<!-- ==================BRANDS SECTION============================================== -->
+
+<section class="brands grid">
+    <div class="logos">
+        <div class="logos-slide1">
+            <img src="/img/brand1.png" alt="logo-png">
+            <img src="/img/brand2.png" alt="logo-png">
+            <img src="/img/brand3.png" alt="logo-png">
+            <img src="/img/brand4.png" alt="logo-png">
+            <img src="/img/brand5.webp" alt="logo-png">
+            <img src="/img/brand6.png" alt="logo-png">
+            <img src="/img/brand8.png" alt="logo-png">
+            <img src="/img/brand9.png" alt="logo-png">
+            <img src="/img/brand11.png" alt="logo-png">
+        </div>
+        <!-- <div class="logos-slide2">
+            <img src="/img/brand1.png" alt="logo-png">
+            <img src="/img/brand2.png" alt="logo-png">
+            <img src="/img/brand3.png" alt="logo-png">
+            <img src="/img/brand4.png" alt="logo-png">
+            <img src="/img/brand5.webp" alt="logo-png">
+            <img src="/img/brand6.png" alt="logo-png">
+            <img src="/img/brand8.png" alt="logo-png">
+            <img src="/img/brand9.png" alt="logo-png">
+            <img src="/img/brand11.png" alt="logo-png">
+        </div> -->
+    </div>
+</section>
+
+
+
+
+<!-- ==================End of Brand Section======================================== -->
+<!-- ======================================================================================================================================================== -->
+
+<!-- ======================================================================================================================================================== -->
+<!-- ==================FOOTER SECTION============================================== -->
+
+<section class="footer grid">
+    <div class="footer-logo grid">
+        <img src="/img/final Logo (2).png" alt="logo.png">
+        <p class="fs-montserrat fs-200">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, aperiam.</p>
+        <div class="social-media flex">
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-instagram"></i>
+            <i class="uil uil-github"></i>
+            <i class="uil uil-linkedin"></i>
+        </div>
+    </div>
+
+    <div class="footer-menu grid">
+        <h3 class="fs-poppins fs-200 bold-800">Quick Links</h3>
+        <ul>
+            <li><a class="active fs-montserrat text-black fs-100" href="/index.html">Home</a></li>
+            <li><a class="fs-montserrat text-black fs-100" href="/about page/about.html">About</a></li>
+            <li><a class="fs-montserrat text-black fs-100" href="/shop page/shop.html">Services</a></li>
+            <li><a class="fs-montserrat text-black fs-100" href="/contact page/contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+    
+    <div class="contact grid">
+            <h3 class="fs-poppins fs-200 bold-800">Contact</h3>
+            <p class="fs-montserrat">+63 0000 000 0000 Enter ADDRES HERE Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>   
+    
+    <div class="email grid">
+        <h3 class="fs-poppins fs-200 bold-800">Subscribe To Our Email</h3>
+        <p class="update fs-poppins fs-300 bold-800">For Latest News & Updates</p>
+        <div class="inputField flex bg-gray">
+            <input type="email" placeholder="Enter Your Email" class="fs-montserrat bg-gray">
+            <button class="bg-red text-white fs-poppins fs-50">Subscribe</button>
+        </div>
+    </div>
+
+    </div>
+</section>
+
+<!-- ==================End of FOOTER Section======================================== -->
+<!-- ======================================================================================================================================================== -->
+
+<!-- ======================================================================================================================================================== -->
+<!-- ==================Copyright SECTION============================================== -->
+
+<section class="copyRight">
+    <p class="c-fonts fs-montserrat fs-200">©️2023 CABS Digital Studio. All rights reserved.</p>
+    <p class="fs-montserrat fs-100 text-align p-top">Privacy Policy • Term & Condition </p>
+</section>
+
+
+
+<!-- ==================End of copyright Section======================================= -->
+<!-- ======================================================================================================================================================== -->
+
+
+
+
+     <script src="/main.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
