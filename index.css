@@ -917,6 +917,7 @@ body {
 
     .product-img2 {
         /* right: -6rem; */
+        z-index: -1;
     }
 
     .product-img3 {
