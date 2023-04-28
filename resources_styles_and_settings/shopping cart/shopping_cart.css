@@ -11,7 +11,8 @@
 * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
+
 }
 
 a {
@@ -28,15 +29,18 @@ body {
 }
 
 .shopMenu-container {
-    width: 1200px;
+    width: 80%;
     height: 100%;
     border: 1px solid var(--white);
     max-width: 100%;
-    margin: 50px auto 0;
+    margin: 50px;
+    margin-top: 0;
+    margin-left: 10%;
     display: grid;
     grid-template-columns: 200px auto 300px;
     padding: 20px;
     border-radius: 30px;
+    justify-content: center;
 }
 
 .shopMenu-container .shop_menu {
@@ -97,6 +101,11 @@ body {
 
 /* center */
     /* form */
+.shop_menu_center {
+    width: 100%;
+    overflow: scroll;
+}
+
 .shop_menu_center .search {
     background-color: var(--white);
     padding: 20px;
