@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Shopping cart</title>
+
+    <link rel="stylesheet" href="shopping_cart.css">
+
+</head>
+<body>
+
+    <div class="shopMenu-container">
+        <div class="shop_menu">
+            <!-- <div class="logo">
+                Lun<span>Dev</span>
+            </div> -->
+            <ul>
+                <li><i class="fa-solid fa-house-user"></i> <a href="/index.html"> Home</a></li>
+                <li class="active"><i class="fa-solid fa-cart-shopping"></i>My Cart</li>
+                <li><i class="fa-solid fa-credit-card"></i>Checkout Form</li>
+            </ul>
+            <ul>
+                <li><i class="fa-regular fa-user"></i> User Account</li>
+                <li><i class="fa-solid fa-bag-shopping"></i> My Order</li>
+                <li><i class="fa-solid fa-truck-fast"></i>Order Complete</li>
+                <li><i class="fa-solid fa-heart"></i>Wishlist</li>
+                <li><i class="fa-solid fa-star"></i>Feedback/Review`~</li>
+            </ul>
+        </div>
+        <div class="shop_menu_center">
+            <!-- <div class="search">
+                <div class="form">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search...">
+                    <button>Search</button>
+                </div>
+            </div> -->
+
+            <h2>Products</h2>
+            <div class="list">
+                <div class="item" data-key="1">
+                    <div class="img">
+                        <img src="/img/photo printing.jpg" alt="product-img.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product Name 1</div>
+                        <div class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quos perferendis, perspiciatis et dolor qui rem ab earum atque quasi? 
+                        </div>
+                        <div class="price">$9.99</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <div class="add-remove-btn">
+                            <button class="add">Add to cart</button>
+                            <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-key="2">
+                    <div class="img">
+                        <img src="/img/photo printing.jpg" alt="product-img.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product Name 2</div>
+                        <div class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quos perferendis, perspiciatis et dolor qui rem ab earum atque quasi? 
+                        </div>
+                        <div class="price">$99.99</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <div class="add-remove-btn">
+                            <button class="add">Add to cart</button>
+                            <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-key="3">
+                    <div class="img">
+                        <img src="/img/photo printing.jpg" alt="product-img.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product Name 3</div>
+                        <div class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quos perferendis, perspiciatis et dolor qui rem ab earum atque quasi? 
+                        </div>
+                        <div class="price">$999.99</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <div class="add-remove-btn">
+                            <button class="add">Add to cart</button>
+                            <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-key="4">
+                    <div class="img">
+                        <img src="/img/photo printing.jpg" alt="product-img.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product Name 4</div>
+                        <div class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quos perferendis, perspiciatis et dolor qui rem ab earum atque quasi? 
+                        </div>
+                        <div class="price">$9999.99</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <div class="add-remove-btn">
+                            <button class="add">Add to cart</button>
+                            <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-key="5">
+                    <div class="img">
+                        <img src="/img/photo printing.jpg" alt="product-img.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product Name 5</div>
+                        <div class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quos perferendis, perspiciatis et dolor qui rem ab earum atque quasi? 
+                        </div>
+                        <div class="price">$0.99</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <div class="add-remove-btn">
+                            <button class="add">Add to cart</button>
+                            <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item" data-key="6">
+                    <div class="img">
+                        <img src="/img/photo printing.jpg" alt="product-img.jpg">
+                    </div>
+                    <div class="content">
+                        <div class="title">Product Name 6</div>
+                        <div class="des">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quos perferendis, perspiciatis et dolor qui rem ab earum atque quasi? 
+                        </div>
+                        <div class="price">$9</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <div class="add-remove-btn">
+                            <button class="add">Add to cart</button>
+                            <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="cart">
+            <div class="name">Items in Cart</div>
+            <div class="listCart">
+
+            </div>
+            <div class="payment">
+                <div class="total">
+                    <p>Total : <span class="totalPrice"></span></p>
+                    <p>Discount : <span class="discount"></span></p>
+                    <p>Shipping Fee : <span class="shipping-fee"></span></p>
+                </div>
+                <div class="coupon">
+                    <span>Enter Coupon Code: </span>
+                    <input type="text" name="number" class="couponCode">
+                </div>
+                <div class="final-price">
+                    <p>Total Payment: <span class="total-payment"></span></p>
+                </div>
+            </div>
+            <button class="check-out">Confirm Order</button>
+        </div>
+    </div>
+
+    <script src="shopping_cart.js"></script>
+</body>
+</html>

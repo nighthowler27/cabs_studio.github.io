@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+html, body {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+
+.wrapper {
+    overflow: hidden;
+    max-width: 390px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 2rem;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+
+.wrapper .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapper .title-text .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265,1.55);
+}
+
+.wrapper .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: .5rem;
+    margin: 30px 0px 10px 0px;
+    justify-content: space-between;
+    border: 1px solid lightgrey;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+#signup:checked ~ .slide-tab {
+    left: 50%;
+}
+
+#signup:checked ~ .signup {
+    color: #fff;
+}
+
+#signup:checked ~ .login {
+    color: #000;
+}
+
+.slide-controls .signup {
+    color: #000;
+}
+
+.slide-controls .slide-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: .5rem;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265,1.55);
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265,1.55);
+}
+
+.form-inner form  .field {
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form-inner form .field input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    padding-left: 15px;
+    font-size: 17px;
+    border-radius: .5rem;
+    border: 1px solid #a9a6a6;
+    border-bottom-width: 2px;
+    transition: all 0.4s ease;
+}
+
+.form-inner form .field input:focus {
+    border-color: #fc83bb;
+}
+
+.form-inner form .pass-link {
+    margin-top: 5px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .signup-link a {
+    color: #fa4299;
+    text-decoration: none;
+}
+
+.form-inner form .signup-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover {
+    text-decoration: underline;
+}
+
+form .field input[type="submit"] {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 0;
+    border: none;
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+}
+/* //=================================================================== */
+/* The modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black with opacity */
+  }
+  
+  /* Modal content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: .5rem;
+    width: 25%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* Close button */
+  .close-modal-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-modal-btn:hover,
+  .close-modal-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Input fields */
+  input[type="email"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  
+  /* Reset password button */
+  #reset-password-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  #reset-password-btn:hover {
+    background-color: #45a049;
+  }
+  
+/* //Reset pasword confirmation================ */
+.confirmation-message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+  }
+  

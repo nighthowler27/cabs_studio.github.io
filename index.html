@@ -13,8 +13,9 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <!-- ==========Icons CDN================ -->
 
-    <link rel="stylesheet" href="/home_page/index.css">
+    <link rel="stylesheet" href="/index.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <title>CABS Creative Studio</title>
 
@@ -28,20 +29,20 @@
     <header class="primary-header container flex">
         <div class="header-inner-one flex">
             <div class="logo">
-                <a href="/home_page/index.html"><img src="/img/final Logo (2).png" alt="logo.png"></a>
+                <img src="/img/final Logo (2).png" alt="logo.png">
             </div>
 
-            <div class="mobile-close-btn" data-visible="false" aria-controls="primary-navigation">
+            <button class="mobile-close-btn" data-visible="false" aria-controls="primary-navigation">
                 <i class="uil uil-times-circle"></i>
-            </div>
+            </button>
 
             <nav>
                 <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
                     <li><a class="active fs-100 fs-montserrat bold-500"  href="/index.html">Home</a></li>
-                    <li><a class="fs-100 fs-montserrat bold-500"  href="/index_logout/shop.html">Services</a></li>
-                    <li><a class="fs-100 fs-montserrat bold-500"  href="/index_logout/about.html">About</a></li>
-                    <!-- <li><a class="fs-100 fs-montserrat bold-500"  href="/blog/blog.html">Blog</a></li> -->
-                    <li><a class="fs-100 fs-montserrat bold-500"  href="/index_logout/contact.html">Contact</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/shop page/shop.html">Services</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/about page/about.html">About</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/blog/blog.html">FaQ</a></li>
+                    <li><a class="fs-100 fs-montserrat bold-500"  href="/contact page/contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,7 +53,7 @@
                 <p class="fs-100 fs-montserrat bold-500">Login</p>
             </button>           
             <i class="uil uil-search"></i>
-            <!-- <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag"></i> -->
+            <i id="cart-box" aria-controls="cart-icon" class="uil uil-shopping-bag"></i>
             <!-- ================================================ -->
 
             <!-- login Modal  -->
@@ -179,8 +180,8 @@
     
     <div class="hero-inner flex">
         <div>
-            <button type="button" class="large-btn bg-red text-white fs-poppins fs-200 ">Check Our Products</button>
-            <button type="button" class="large-btn bg-red text-white fs-poppins fs-200" id="hire-us-btn1">Hire Us</button>
+            <button class="large-btn bg-red text-white fs-poppins fs-200 "><a href="/shop page/shop.html">Check Our Products</a></button>
+            <button class="large-btn bg-red text-white fs-poppins fs-200" id="hire-us-btn"> <a href="/resources_styles_and_settings/shopping cart/shopping_cart.html">Shop now</a></button>
             <div class="hero-info">
                 <h4 class="fs-montserrat">Description</h4>
                 <p class="fs-montserrat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae asperiores et pariatur nam velit omnis corporis. Iure iste vel impedit recusandae nulla, animi distinctio laudantium deleniti sunt. Ipsam atque quisquam est error accusamus, et, <br><br> rerum necessitatibus cum id dignissimos voluptatibus temporibus perspiciatis neque nulla, voluptatum pariatur magnam doloribus vel a. Est voluptatem sed ipsum ducimus, earum alias ab, voluptate ratione in vel dolorum maiores quos iure consequuntur adipisci deleniti necessitatibus.</p>
@@ -659,8 +660,8 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-     <script src="/home_page/main.js"></script>
 
+     <script src="/main.js"></script>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>

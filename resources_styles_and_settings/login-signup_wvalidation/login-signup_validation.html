@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Complete Login & Signup Form</title>
+
+    <link rel="stylesheet" href="login-signup_validation.css" />
+
+    
+
+  
+  </head>
+  <body>
+    <div class="container">
+      <form action="/" class="login">
+        <h2 class="title">Login with your account</h2>
+        <div class="form-group">
+          <label for="email username">User ID</label>
+          <div class="input-group">
+            <input type="email" name="email" placeholder="Username/Email Address">
+            <i class='bx bx-envelope'></i>
+          </div>
+          <span class="help-text" id="login-email-error">Enter a registered username or email address</span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input type="password" pattern=".{8,}" name="password" placeholder="Your Password">
+            <i class='bx bx-lock-alt' ></i>
+          </div>
+          <span class="help-text" id="login-pass-error">Enter a registered password</span>
+          <!-- <span class="help-text" id="login-emailPass-error">Enter a valid email address and password</span> -->
+        </div>
+          <button type="submit" class="btn-submit">Login</button>
+          <a href="#">Forgot password?</a>
+          <p>I don't have an account. <a href="#" onclick="switchForm('register', event)">Register</a></p>
+      </form>
+
+      <form action="/" method="post" class="register active">
+        <h2 class="title">Registeryour account</h2>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <div class="input-group">
+            <input type="username" pattern=".{6,}" name="username" placeholder="Username">
+            <i class='bx bx-user'></i>
+          </div>
+          <span class="help-text" id="reg-email-error">Minimum of 6 characters</span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <div class="input-group">
+            <input type="email" name="email" placeholder="Email Address">
+            <i class='bx bx-envelope'></i>
+          </div>
+          <span class="help-text" id="reg-email-error">Enter a valid email address</span>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div class="input-group">
+            <input type="password" pattern=".{8,}" name="password" placeholder="Your Password">
+            <i class='bx bx-lock-alt' ></i>
+          </div>
+          <span class="help-text" id="reg-pass-error">At least 8 characters</span>
+        </div>
+        <div class="form-group">
+          <label for="password">Confirm Password</label>
+          <div class="input-group">
+            <input type="password" pattern=".{8,}" name="conpass" placeholder="Enter password again">
+            <i class='bx bx-lock-alt' ></i>
+          </div>
+          <span class="help-text" id="reg-conPass-error">Confirm password must be same with password</span>
+        </div>
+          <button type="submit" class="btn-submit">Register</button>
+          <p>I already have an account. <a href="#" onclick="switchForm('login', event)">Login</a></p>
+      </form>
+    </div>
+   
+    <script src="login-signup_validation.js"></script>
+  </body>
+</html>

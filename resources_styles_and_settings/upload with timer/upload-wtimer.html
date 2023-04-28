@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="upload-wtimer.html">
+</head>
+<body>
+    <div id="timer">00:00:00</div>
+	<h1>Submit Your File</h1>
+	<div class="image-download">
+		<img src="image.jpg" alt="Image">
+		<a href="image.jpg" download>Download Image</a>
+		<p>Instructions: Please use the downloaded image for the next step.</p>
+		<form action="submit.php" method="post" enctype="multipart/form-data">
+			<label for="image">Upload Image:</label>
+			<input type="file" name="image" id="image" accept="image/*" required>
+		</form>
+	</div>
+	<div class="file-upload">
+		<h2>Upload Your File</h2>
+		<form action="submit.php" method="post" enctype="multipart/form-data">
+			<label for="file">Choose File:</label>
+			<input type="file" name="file" id="file">
+			<input type="submit" name="submit" value="Submit">
+		</form>
+	</div>
+    
+
+    <script src="upload-wtimer.js"></script>
+</body>
+</html>

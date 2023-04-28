@@ -1,0 +1,85 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding: 0 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #343F4F;
+}
+
+.slide-wrapper {
+    max-width: 1200px;
+    position: relative;
+}
+.slide-wrapper i {
+    height: 46px;
+    width: 46px;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 46px;
+    position: absolute;
+    top: 50%;
+    background: #fff;
+    border-radius: 50%;
+    cursor: pointer ;
+    transform: translateY(-50%);
+}
+
+.slide-wrapper i:first-child {
+    left: -23px;
+    display: none;
+}
+
+.slide-wrapper i:last-child {
+    right: -23px;
+}
+
+.slide-wrapper .slide-carousel {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.slide-carousel {
+    cursor: grab;
+    scroll-behavior: auto;
+}
+
+.slide-carousel img {
+    pointer-events: none;
+}
+
+.slide-carousel img {
+    height: 340px;
+    object-fit: cover;
+    margin-left: 14px;
+    width: calc(100% / 3);
+}
+
+.slide-carousel img:first-child {
+    margin-left: 0px;
+}
+
+@media screen  and (max-width: 900px) {
+    .slide-carousel img {
+        width: calc(100% / 2);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .slide-carousel img {
+        width: 100%;
+    }
+}
